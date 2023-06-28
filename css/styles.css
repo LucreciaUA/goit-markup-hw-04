@@ -191,7 +191,8 @@ Header styles
 }
 
 .menu .active-page{
-    color: red;
+    display: flex;
+    flex-direction: column;
 }
 .menu .active-page::after{
     content: "";
