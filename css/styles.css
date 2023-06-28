@@ -1,0 +1,533 @@
+:root{
+--background-color-dark: #2E2F42;
+--background-color-white: #fff;
+--logo-color-web: #4D5AE5;
+--background-color-team: #F4F4FD;
+--text-color-main: #434455;
+--text-color-headline: #2E2F42;
+--link-color-active: #404BBF;
+--button-color-filter:#F4F4FD;
+--text-color-light: #F4F4FD;
+--text-color-white: #fff;
+--button-filer-text: #4D5AE5;
+--border-light: #E7E9FC;
+--button-color-filter-border: #E5E5E5;
+--icon-social-peace: #4D5AE5;
+--icon-social-active-fist: #404BBF;
+--icon-social-active-second: #31D0AA;
+--company-logo-peace: #8E8F99;
+}
+/*
+|||||||||||||||||||||||||||||||||||||||
+---------------------------------------
+Common styles
+---------------------------------------
+|||||||||||||||||||||||||||||||||||||||
+*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--text-color-main);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: var(--background-color-white);
+    width: 1440px;
+    margin: 0 auto;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+        object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol{
+    margin: 0;
+    padding: 0;
+}
+.list{
+    list-style-type: none;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.container{
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+
+.headline{
+    font-size: 56px;
+    text-align: center;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+        padding-bottom: 48px;
+    max-width: 496px;
+    margin: 0 auto;
+}
+
+.second-hl{
+    color: var(--text-color-headline);
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.third-hl{
+    font-size: 20px;
+    color: var(--text-color-headline);
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.02em;
+    
+}
+
+
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/*
+|||||||||||||||||||||||||||||||||||||||
+---------------------------------------
+Index page styles
+---------------------------------------
+|||||||||||||||||||||||||||||||||||||||
+*/
+
+/*
+---------------------------------------
+Header styles
+---------------------------------------
+*/
+
+.header{
+    border-bottom: 1px solid #E7E9FC;
+}
+.header-content{
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo{
+    
+    color: var(--logo-color-web);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
+    font-weight: 800;
+    margin-right: 76px;
+        padding: 24px 0;
+}
+
+.logo .web{
+    color: var(--text-color-headline);
+}
+
+.menu{
+    display: flex;
+    gap: 40px;
+
+}
+
+.menu .link{
+    color: var(--text-color-headline);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 24px 0;
+}
+
+.menu .link:focus, .menu .link:hover{
+    color: var(--link-color-active);
+}
+.address{
+    font-style: normal;
+}
+
+.address .list{
+    display: flex;
+    gap: 40px;
+}
+.address .link{
+    color: var(--text-color-main);
+    letter-spacing: 0.02em;
+}
+
+.address .link:focus, address .link:hover{
+    color: var(--link-color-active);
+}
+
+.menu .active-page{
+    color: red;
+}
+.menu .active-page::after{
+    content: "";
+    width: 48px;
+    height: 4px;
+    background-color: var(--link-color-active);
+}
+
+/*
+---------------------------------------
+Hero(1st section) styles
+---------------------------------------
+*/
+
+.hero{
+    background-color: var(--background-color-dark);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    color: var(--text-color-white); 
+    padding: 188px 0;
+
+}
+
+.order-btn{
+    background-color: var(--logo-color-web);
+    color: var(--text-color-white);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    display: block;
+    min-width: 169px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+.order-btn:hover, .order-btn:focus{
+    background-color: var(--link-color-active);
+}
+
+/*
+---------------------------------------
+Benefit(2nd section) styles
+---------------------------------------
+*/
+
+.benefit-block{
+    padding: 120px 0;
+}
+.benefits{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.benefit{
+    width: calc((100% - 72px) / 4);
+}
+
+.benefit-logo{
+    width: 264px;
+    height: 112px;
+    display: flex;
+    background-color: var(--background-color-team);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.benefits .third-hl{
+    margin-bottom: 8px;
+    text-align: left;
+}
+.paragraf{
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    color: var(--text-color-main);
+}
+/*
+---------------------------------------
+Progects(3rd section) styles
+---------------------------------------
+*/
+.mp-projects{
+    padding-bottom: 120px;
+}
+.projects-exemples{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.exemple{
+    border: 1px solid var(--border-light);
+    width: calc((100% - 48px) / 3);
+}
+
+/*
+---------------------------------------
+Team(4th section) styles
+---------------------------------------
+*/
+.team{
+    background-color: var(--background-color-team);
+    padding: 120px 0;
+}
+
+
+.team-members{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+}
+
+.card{
+    background-color: var(--text-color-white);
+    letter-spacing: 0.02em;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    width: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.card-info{
+    padding: 32px 16px;
+}
+
+.card .third-hl{
+    margin-bottom: 8px;
+} 
+
+.card .paragraf{
+    text-align: center;
+}
+.team-social{
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+}
+
+.team-social-link{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+        align-items: center;
+    background-color: var(--icon-social-peace);
+    margin-top: 8px;
+}
+
+.team-social-link:hover,
+.team-social-link:focus{
+    background-color: var(--icon-social-active-fist);
+}
+
+
+
+/*
+---------------------------------------
+Company(5th section) styles
+---------------------------------------
+*/
+
+.companies{
+    padding: 120px 0;
+}
+
+
+.company{
+    display: flex;
+    gap: 24px;
+
+}
+
+.company-logo{
+    width: 168px;
+    height: 88px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--company-logo-peace);
+}
+
+.company-icon{
+    fill: var(--company-logo-peace);
+}
+
+.company-logo:hover,
+.company-logo:active
+{
+    border-color: var(--icon-social-active-fist);
+}
+.company-logo:hover .company-icon,
+.company-logo:active .company-icon{
+    fill: var(--icon-social-active-fist);
+}
+/*
+---------------------------------------
+Footer styles
+---------------------------------------
+*/
+
+.footer{
+    color: var(--text-color-light);
+    background-color: var(--background-color-dark);
+    letter-spacing: 0.02em;
+    padding: 100px 0;
+}
+
+.footer .container{
+    display: flex;
+}
+
+.logo-d{
+    color: var(--logo-color-web);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.logo-d .web{
+
+    color: var(--text-color-light);
+}
+
+.footer-p{
+    max-width: 264px;
+    margin-right: 120px;
+}
+footer .third-hl{
+    color: inherit;
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+.footer-social {
+    display: flex;
+    flex-shrink: 0;
+    gap: 24px;
+}
+
+.footer-social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-social-peace);
+    margin-top: 8px;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--icon-social-active-second);
+}
+
+
+/*
+|||||||||||||||||||||||||||||||||||||||
+---------------------------------------
+Portfolio page styles
+---------------------------------------
+|||||||||||||||||||||||||||||||||||||||
+*/
+
+.portfolio{
+padding: 96px 0 120px 0;}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 72px;
+    gap: 24px;
+}
+.filter-option{
+    background-color: var(--button-color-filter);
+    font-family: "Roboto", sans-serif;
+    color: var(--button-filer-text);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    padding: 12px 24px;
+}
+
+.filter-option:hover, .filter-option:focus{
+    background-color: var(--link-color-active);
+    border: 1px solid transparent;
+    color: var(--text-color-white);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 48px 24px;
+
+}
+.project-card{
+    letter-spacing: 0.02em;
+    width: calc((100% - 48px) / 3);
+}
+
+.project-card:hover{
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.project-card .third-hl{
+margin-bottom: 8px;
+    text-align: left;
+}
+
+
+
+.card-content{
+    padding: 32px 16px;
+    border: 1px solid var(--border-light);
+    border-top: none;
+}
