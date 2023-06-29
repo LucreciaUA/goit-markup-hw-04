@@ -515,7 +515,7 @@ Company(5th section) styles
 }
 
 .company-logo{
-    width: calc((100% - 120px) / 6);
+    width: 168px;
     height: 88px;
     display: flex;
     border-radius: 4px;
