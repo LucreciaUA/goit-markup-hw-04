@@ -325,7 +325,7 @@ modal window
 
 }
 
-.close-btn:active{
+.close-btn:focus{
         background-color: #404bbf;
         border: none;
     }
@@ -338,13 +338,13 @@ modal window
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:active .icon{
+.close-btn:focus .icon{
         stroke: var(--background-color-white);
-        fill: var(--background-color-white);
+        fill: #fff;
     }
 .close-btn:hover .icon{
     stroke: var(--background-color-white);
-    fill: var(--background-color-white);
+    fill: #fff;
 }
 
 @keyframes modal-animation{
@@ -534,9 +534,9 @@ Company(5th section) styles
 .company-logo:hover{
         border-color: var(--icon-social-active-fist);
         color: var(--icon-social-active-fist);
-    }
+}
 
-.company-logo:active
+.company-logo:focus
 {
     border-color: var(--icon-social-active-fist);
     color: var(--icon-social-active-fist);
@@ -545,7 +545,7 @@ Company(5th section) styles
         fill: var(--icon-social-active-fist);
     }
 
-.company-logo:active .company-icon{
+.company-logo:focus .company-icon{
     fill: var(--icon-social-active-fist);
 }
 /*
