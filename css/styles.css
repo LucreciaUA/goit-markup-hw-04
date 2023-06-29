@@ -16,6 +16,8 @@
 --icon-social-active-fist: #404BBF;
 --icon-social-active-second: #31D0AA;
 --company-logo-peace: #8E8F99;
+--modal-window-color: #FCFCFC;
+--overlay-color: #4D5AE5;
 }
 /*
 |||||||||||||||||||||||||||||||||||||||
@@ -55,6 +57,15 @@ h1, h2, h3, h4, h5, h6, p, ul, ol{
 
 .link{
     text-decoration: none;
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn{
+    transition-property: color, background-color, border, box-shadow, fill, stroke;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container{
@@ -150,7 +161,6 @@ Header styles
     line-height: 1.17;
     font-weight: 800;
     margin-right: 76px;
-        padding: 24px 0;
 }
 
 .logo .web{
@@ -168,7 +178,7 @@ Header styles
     font-weight: 500;
     letter-spacing: 0.02em;
     padding: 24px 0;
-display: block;
+    display: block;
 }
 
 .menu .link:focus, .menu .link:hover{
@@ -194,12 +204,16 @@ display: block;
 .menu .active-page{
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
 }
 .menu .active-page::after{
     content: "";
-    width: 48px;
+    width: 100%;
     height: 4px;
     background-color: var(--link-color-active);
+    flex-shrink: 0;
+    margin-top: 20px;
+
 }
 
 /*
@@ -238,6 +252,89 @@ Hero(1st section) styles
 
 .order-btn:hover, .order-btn:focus{
     background-color: var(--link-color-active);
+}
+
+/*
+modal window
+*/
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.40);
+}
+
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+    background: var(--modal-window-color);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation-name: modal-animation;
+    animation-duration: 300ms;
+    
+}
+
+.modal .icon{
+    stroke: var(--text-color-headline);
+    fill: var(--text-color-headline);
+}
+
+.close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: var(--border-light);
+
+}
+
+.close-btn:active,
+.close-btn:hover{
+    background-color: var(--icon-social-active-fist);
+    border: transparent;
+}
+
+.close-btn:active .icon,
+.close-btn:hover .icon{
+    stroke: var(--background-color-white);
+    fill: var(--background-color-white);
+}
+
+@keyframes modal-animation{
+    0%{
+        opacity: 0;
+    }
+
+    33%{
+        opacity: 33%;
+    }
+
+    66%{
+        opacity: 66%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
 }
 
 /*
@@ -515,11 +612,14 @@ padding: 96px 0 120px 0;}
 .project-card{
     letter-spacing: 0.02em;
     width: calc((100% - 48px) / 3);
+    
 }
 
 .project-card:hover{
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+
 
 .project-card .third-hl{
 margin-bottom: 8px;
@@ -532,4 +632,28 @@ margin-bottom: 8px;
     padding: 32px 16px;
     border: 1px solid var(--border-light);
     border-top: none;
+    
 }
+.image-block{
+    height: 300px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 300px;
+    flex-shrink: 0;
+    background-color: var(--overlay-color);
+    transform: translateY(100%);
+    transition: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card:hover .overlay {
+    transform: translateY(0)
+    }
+
