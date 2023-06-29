@@ -241,6 +241,7 @@ Hero(1st section) styles
     color: var(--text-color-white); 
     padding: 188px 0;
     background-position: center;
+    margin: 0 auto;
 
 }
 
